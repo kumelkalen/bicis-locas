@@ -8,7 +8,12 @@ function validateForm(){
 	var twitter = document.getElementById("input-social").value;
 	var check = document.getElementById("check");
 	var cont = 0;
-	if(nombre != ""){
+	var errorDiv = document.getElementsByClassName("input-box");
+	var span = document.createElement("span");
+	var textError = document.createTextNode("Error ;0");
+	span.appendChild(textError);
+	errorDiv.appendChild(span);
+	if(nombre != "" && ){
 		cont++;
 	}
 	if(apellido != ""){
@@ -17,8 +22,10 @@ function validateForm(){
 	if(email != ""){
 		cont++;
 	}
-	if(contraseña != ""){
+	if(contraseña != "" && contraseña != password  && contraseña != "123456"  && contraseña != "098754"  && contraseña.length > 6){
 		cont++;
+	}else{
+		errorDiv.append
 	}
 	if(bici != 0){
 		cont++;
@@ -32,5 +39,7 @@ function validateForm(){
 	console.log(cont);
 	if(cont==7){
 		alert("Felicitaciones, te has registrado exitosamente ^-^!!");
+	}else{
+		alert("Lo sentimos, tu registro no es válido. Vuelve a intentarlo :0");
 	}
 }
