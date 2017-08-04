@@ -9,7 +9,7 @@ function validateForm(){
 	var check = document.getElementById("check");
 	var cont = 0;
 	var errorDiv = document.getElementsByClassName("input-box");
-	if(nombre != "" ){
+	if(nombre != "" && nombre.substring(0,1)==nombre.substring(0,1).toUpperCase() ){
 		cont++;
 	}else{
 		var spanA = document.createElement("span");
@@ -17,10 +17,9 @@ function validateForm(){
 		spanA.appendChild(textErrorA);
 		errorDiv[0].appendChild(spanA);
 	}
-	if(apellido != ""){
+	if(apellido != "" && apellido.substring(0,1)==apellido.substring(0,1).toUpperCase()){
 		cont++;
 	}else{
-		
 		var spanB = document.createElement("span");
 		var textErrorB = document.createTextNode("Error ;o; debe comenzar con mayúscula y contener sólo letras");
 		spanB.appendChild(textErrorB);
@@ -34,7 +33,7 @@ function validateForm(){
 		spanC.appendChild(textErrorC);
 		errorDiv[2].appendChild(spanC);
 	}
-	if(contraseña != "" && contraseña != password  && contraseña != "123456"  && contraseña != "098754"  && contraseña.length > 6){
+	if(contraseña != "" && contraseña != "password"  && contraseña != "123456"  && contraseña != "098754"  && contraseña.length > 6){
 		cont++;
 	}else{
 		var spanD = document.createElement("span");
