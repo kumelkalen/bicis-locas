@@ -7,5 +7,19 @@ function validateForm(){
 	var bici = tagBici[0].value;
 	var twitter = document.getElementById("input-social").value;
 	var check = document.getElementById("check");
-	
+	if(nombre != ""){
+		
+	}else if(apellido != ""){
+		
+	}else if(email != ""){
+		
+	}else if(contraseña != ""){
+		
+	}else if(bici != 0){
+		
+	}else if(twitter != ""){
+		
+	}else if (check.checked==true){
+		
+	}
 }
