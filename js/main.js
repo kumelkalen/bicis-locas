@@ -9,33 +9,46 @@ function validateForm(){
 	var check = document.getElementById("check");
 	var cont = 0;
 	var errorDiv = document.getElementsByClassName("input-box");
-	var span = document.createElement("span");
-	var textError = document.createTextNode("Error ;0");
-	span.appendChild(textError);
 	if(nombre != "" ){
 		cont++;
 	}else{
-		errorDiv[0].appendChild(span);
+		var spanA = document.createElement("span");
+		var textErrorA = document.createTextNode("Error ;o; debe comenzar con mayúscula y contener sólo letras");
+		spanA.appendChild(textErrorA);
+		errorDiv[0].appendChild(spanA);
 	}
 	if(apellido != ""){
 		cont++;
 	}else{
-		errorDiv[1].appendChild(span);
+		
+		var spanB = document.createElement("span");
+		var textErrorB = document.createTextNode("Error ;o; debe comenzar con mayúscula y contener sólo letras");
+		spanB.appendChild(textErrorB);
+		errorDiv[1].appendChild(spanB);
 	}
 	if(email != ""){
 		cont++;
 	}else{
-		errorDiv[2].appendChild(span);
+		var spanC = document.createElement("span");
+		var textErrorC = document.createTextNode("Error ;o; tu email debe ser como ej : name@domain.com");
+		spanC.appendChild(textErrorC);
+		errorDiv[2].appendChild(spanC);
 	}
 	if(contraseña != "" && contraseña != password  && contraseña != "123456"  && contraseña != "098754"  && contraseña.length > 6){
 		cont++;
 	}else{
-		errorDiv[3].appendChild(span);
+		var spanD = document.createElement("span");
+		var textErrorD = document.createTextNode("Error ;o; ingresa una contraseña que tenga más de 6 caracteres y que no sea 123456 o 098754");
+		spanD.appendChild(textErrorD);
+		errorDiv[3].appendChild(spanD);
 	}
 	if(bici != 0){
 		cont++;
 	}else{
-		errorDiv[4].appendChild(span);
+		var spanE = document.createElement("span");
+		var textErrorE = document.createTextNode("Error ;o; selecciona un tipo de bici");
+		spanE.appendChild(textErrorE);
+		errorDiv[4].appendChild(spanE);
 	}
 	console.log(cont);
 	if(cont==5){
