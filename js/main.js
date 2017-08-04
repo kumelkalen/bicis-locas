@@ -9,7 +9,8 @@ function validateForm(){
 	var check = document.getElementById("check");
 	var cont = 0;
 	var errorDiv = document.getElementsByClassName("input-box");
-	if(nombre != "" && nombre.substring(0,1)==nombre.substring(0,1).toUpperCase() ){
+	var abc = ["á","é","í","ó","ú","a","b","c","d","e","f","g","h","i","j","k","l","m","n","ñ","o","p","q","r","s","t","u","v","w","x","y","z"] /*"áéíóúabcdefghijklmnñopqrstuvwxyz"*/;
+	if(nombre != "" && nombre.substring(0,1)==nombre.substring(0,1).toUpperCase() && (/^[a-zA-Z ]*$/).test(nombre)==true){
 		cont++;
 	}else{
 		var spanA = document.createElement("span");
@@ -17,7 +18,7 @@ function validateForm(){
 		spanA.appendChild(textErrorA);
 		errorDiv[0].appendChild(spanA);
 	}
-	if(apellido != "" && apellido.substring(0,1)==apellido.substring(0,1).toUpperCase()){
+	if(apellido != "" && apellido.substring(0,1)==apellido.substring(0,1).toUpperCase() && (/^[a-zA-Z ]*$/).test(nombre)==true){
 		cont++;
 	}else{
 		var spanB = document.createElement("span");
