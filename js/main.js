@@ -7,19 +7,30 @@ function validateForm(){
 	var bici = tagBici[0].value;
 	var twitter = document.getElementById("input-social").value;
 	var check = document.getElementById("check");
+	var cont = 0;
 	if(nombre != ""){
-		
-	}else if(apellido != ""){
-		
-	}else if(email != ""){
-		
-	}else if(contraseña != ""){
-		
-	}else if(bici != 0){
-		
-	}else if(twitter != ""){
-		
-	}else if (check.checked==true){
-		
+		cont++;
+	}
+	if(apellido != ""){
+		cont++;
+	}
+	if(email != ""){
+		cont++;
+	}
+	if(contraseña != ""){
+		cont++;
+	}
+	if(bici != 0){
+		cont++;
+	}
+	if(twitter != ""){
+		cont++;
+	}
+	if (check.checked==true){
+		cont++;
+	}
+	console.log(cont);
+	if(cont==7){
+		alert("Felicitaciones, te has registrado exitosamente ^-^!!");
 	}
 }
