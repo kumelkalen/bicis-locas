@@ -12,32 +12,33 @@ function validateForm(){
 	var span = document.createElement("span");
 	var textError = document.createTextNode("Error ;0");
 	span.appendChild(textError);
-	errorDiv.appendChild(span);
-	if(nombre != "" && ){
+	if(nombre != "" ){
 		cont++;
+	}else{
+		errorDiv[0].appendChild(span);
 	}
 	if(apellido != ""){
 		cont++;
+	}else{
+		errorDiv[1].appendChild(span);
 	}
 	if(email != ""){
 		cont++;
+	}else{
+		errorDiv[2].appendChild(span);
 	}
 	if(contraseña != "" && contraseña != password  && contraseña != "123456"  && contraseña != "098754"  && contraseña.length > 6){
 		cont++;
 	}else{
-		errorDiv.append
+		errorDiv[3].appendChild(span);
 	}
 	if(bici != 0){
 		cont++;
-	}
-	if(twitter != ""){
-		cont++;
-	}
-	if (check.checked==true){
-		cont++;
+	}else{
+		errorDiv[4].appendChild(span);
 	}
 	console.log(cont);
-	if(cont==7){
+	if(cont==5){
 		alert("Felicitaciones, te has registrado exitosamente ^-^!!");
 	}else{
 		alert("Lo sentimos, tu registro no es válido. Vuelve a intentarlo :0");
